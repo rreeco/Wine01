@@ -1,0 +1,166 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(241, 241, 241);
+}
+
+nav#nav_menu {
+    background-color: rgb(49, 49, 49) !important;
+
+}
+
+nav#nav_menu a.navbar-brand {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+nav#nav_menu div#nav_login > li{
+    display: flex;
+}
+nav#nav_menu li.nav_menu > ul, nav#nav_menu div#nav_login > li > ul{
+    margin: 0 10px;
+    padding: 0;
+}
+nav#nav_menu li.nav_menu > ul > a, nav#nav_menu div.nav_login li > ul > a, nav#nav_menu div#nav_login > li > ul > a,
+nav#nav_menu li.nav_menu > ul > a:visited, nav#nav_menu div#nav_login > li > ul > a:visited, nav#nav_menu div#nav_login > li > ul > a:visited {
+    color: rgb(196, 196, 196);
+    text-decoration: none;
+}
+nav#nav_menu li.nav_menu > ul > a.active, nav#nav_menu div#nav_login > li > ul > a.active, nav#nav_menu div#nav_login > li > ul > a.active,
+nav#nav_menu li.nav_menu > ul > a.active:visited, nav#nav_menu div#nav_login > li > ul > a.active:visited, nav#nav_menu div#nav_login > li > ul > a.active:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+nav#nav_menu li.nav_menu > ul > a.primary_button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 117, 86);
+    padding: 10px !important;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+nav#nav_menu div#profile_search {
+    display: flex;
+    align-items: center;
+}
+nav#nav_menu div#profile_search > * {
+    margin: 0 10px;
+    padding: 0;
+}
+nav#nav_menu div#profile_search > *:hover {
+    cursor: pointer;
+}
+nav#nav_menu div#profile_search img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-right: 0;
+}
+nav#nav_menu div#profile_search i {
+    color: white;
+}
+
+footer#footer_menu {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+}
+footer#footer_menu li {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+footer#footer_menu li > ul{
+    padding: 0;
+    margin: 10px;
+}
+footer#footer_menu li > ul > a,
+footer#footer_menu li > ul > a:hover {
+    color: rgb(196, 196, 196);
+    text-decoration: none;
+}
+footer#footer_menu li > ul > a.active,
+footer#footer_menu li > ul > a.active:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.hidden-icon {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.hidden-icon::before {
+    display: none !important;
+}
+
+div.custom_login {
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 5px;
+}
+div.custom_login div.card-header {
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    padding: 25px 20px;
+}
+div.custom_login div.card-header > h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+div.custom_login div.card-body {
+    padding-top: 0;
+}
+div.custom_login div.card-body input {
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+}
+div.custom_login div.card-body input:focus {
+    box-shadow: none;
+    border: 1px solid #ced4da;
+}
+div.custom_login div.card-body a, div.custom_login div.card-body a {
+    color:rgb(255, 117, 86);
+}
+
+.shadows {
+    box-shadow: 0px 3px 3px 0px rgba(225,225,225,0.75);
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(225,225,225,0.75);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(225,225,225,0.75);
+}
+.primary_button, .primary_button:hover, .primary_button:focus, .primary_button:active{
+    background-color: rgb(255, 117, 86) !important;
+    color: rgb(255, 255, 255) !important;
+    border-color: rgb(255, 117, 86) !important;
+    padding: 10px 20px !important;
+}
+
+ul#account_type_selector {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px !important;
+}
+ul#account_type_selector li a{
+    color: rgb(130, 120, 121);
+    border-color: #ced4da;
+    padding: 10px 0;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+ul#account_type_selector li a.primary_button{
+    padding: 10px 0 !important;
+}
+div#register_container p {
+    color: rgb(130, 120, 121);
+}
+
+.registration_checkbox_container > label {
+    margin-left: 5px;
+    color: rgb(130, 120, 121);
+}
