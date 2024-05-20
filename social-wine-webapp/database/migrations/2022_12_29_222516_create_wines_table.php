@@ -14,19 +14,21 @@ return new class extends Migration
     public function up()
     {
         Schema::create('wines', function (Blueprint $table) {
-            $table->bigInteger('id')->autoIncrement();
-            $table->string('nome');
-            $table->year('annata');     
-            $table->string('metodo');
+            $table->id();
+            $table->string('name');
             $table->string('uvaggio');
-            $table->text('note')->nullable();
+            $table->integer('annata')->nullable();
             $table->text('descrizione')->nullable();
-            $table->char('cantina', 11);      
+            $table->enum('categoria', [
+                'bollicine', 'rossi', 'bianchi', 'dolci']);
+            $table->text('storia')->nullable();
+            $table->string('image_path')->nullable();
+            $table->decimal('prezzo',6,2);
+            $table->decimal('listino',7,2)->nullable();
+            $table->unsignedBigInteger('cantina_id');
             $table->timestamps();
 
-            $table->foreign('cantina')
-                ->references('id')
-                ->on('wine_cellars');
+            $table->foreign('cantina_id')->references('id')->on('cantinas');
                 //->onDelete('cascade');
         });
     }

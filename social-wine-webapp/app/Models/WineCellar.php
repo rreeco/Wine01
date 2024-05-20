@@ -8,4 +8,28 @@ use Illuminate\Database\Eloquent\Model;
 class WineCellar extends Model
 {
     use HasFactory;
+
+    
+    protected $fillable = [
+        'name',
+        'born',
+        'description',
+        'email',
+        'password',
+        'phone',
+        'vat',
+        'address',
+        'city',
+        'country',
+        'image_path'
+    ];
+
+    protected $hidden = [
+        'password',
+        'rememberToken'
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }

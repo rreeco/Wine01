@@ -20,10 +20,13 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'surname',
+        'nickname',
         'email',
         'password',
-        'vat',
-        'address'
+        'country',
+        'cap',
+        'address',
+        'image_path'
     ];
 
     /**
@@ -32,7 +35,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
+        'email',
+        'email_verified_at',
         'password',
+        'address',
         'remember_token',
     ];
 
@@ -43,8 +49,8 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'cap' => 'integer'
     ];
-
     public function roles() {
         return $this->hasMany(Role::class);
     }

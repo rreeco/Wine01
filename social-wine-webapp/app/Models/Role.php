@@ -9,9 +9,11 @@ class Role extends Model
 {
     use HasFactory;
 
+   
     protected $fillable = [
-        "user_id",
+        "seller_id",
         "role"
     ];
+    
     public $timestamps = false;
 }

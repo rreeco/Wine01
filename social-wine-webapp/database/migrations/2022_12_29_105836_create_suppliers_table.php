@@ -14,18 +14,21 @@ return new class extends Migration
     public function up()
     {
         Schema::create('suppliers', function (Blueprint $table) {
-            $table->char('id', 11)->primary();   
-            $table->string('nome');
-            $table->bigInteger('telefono')->nullable();
-            $table->string('via')->nullable();
-            $table->string('città')->nullable();
-            $table->string('regione')->nullable();
-            $table->char('cantina', 11);     
+            $table->id();
+            $table->string('name');
+            $table->date('born')->nullable();
+            $table->string('email');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->string('vat')->unique();
+            $table->string('city');
+            $table->string('country');
+            $table->string('address')->nullable();
+            $table->string('postal_code')->nullable();
+            $table->text('description')->nullable();
+            $table->string('image_path')->nullable();
+            $table->rememberToken();
             $table->timestamps();
-
-            $table->foreign('cantina')
-                ->references('id')
-                ->on('wine_cellars');
                 //->onDelete('cascade');
         });
     }

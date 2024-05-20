@@ -14,16 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->bigInteger('id')->autoIncrement();
-            $table->string('nome');
-            $table->date('data');
-            $table->string('categoria');   //Con selezione ??
-            $table->text('descrizione')->nullable();
-            $table->string('città');
+            $table->id();
+            $table->string('name');
+            $table->date('date');
+            $table->string('category')->nullable();
+            $table->text('description');
+            $table->decimal('price',4,2);
+            $table->string('citta');
             $table->string('regione');
             $table->string('via');
-            $table->char('ids', 11);  
-            $table->char('idc', 11);   
+            $table->string('ids')->nullable();  
+            $table->string('idc')->nullable();   
             $table->timestamps();
 
             $table->foreign('ids')

@@ -14,17 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('roles', function (Blueprint $table) {
-            $table->bigInteger("user_id")->unsigned();
+            $table->bigInteger("signed")->unsigned();
             $table->enum("role", [
-                "admin",
-                "winery",
+                "wine_cellar",
                 "seller",
-                "user"
+                "restaurant",
             ]);
 
-            $table->primary(["user_id", "role"]);
+            $table->primary(["signed", "role"]);
 
-            $table->foreign("user_id")->references("id")->on("users");
+            $table->foreign("signed")->references("id")->on("sellers");   
+        
         });
     }
 

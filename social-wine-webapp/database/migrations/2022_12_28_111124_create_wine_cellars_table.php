@@ -14,13 +14,20 @@ return new class extends Migration
     public function up()
     {
         Schema::create('wine_cellars', function (Blueprint $table) {
-            $table->char('id', 11)->primary();       
-            $table->string('nome');
-            $table->bigInteger('telefono')->nullable();        
-            $table->string('via')->nullable();
-            $table->string('città')->nullable();
-            $table->string('regione')->nullable();
-            $table->year('anno_nascita')->nullable();     
+            $table->id();
+            $table->string('name');
+            $table->date('born')->nullable();
+            $table->string('email');
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->string('vat')->unique();
+            $table->string('city');
+            $table->string('country');
+            $table->string('address')->nullable();
+            $table->string('postal_code')->nullable();
+            $table->text('description')->nullable();
+            $table->string('image_path')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }
