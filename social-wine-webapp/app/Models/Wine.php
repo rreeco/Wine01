@@ -14,6 +14,7 @@ class Wine extends Model
         'uvaggio',
         'annata',
         'descrizione',
+        'categoria',
         'storia',
         'image_path',
         'prezzo',

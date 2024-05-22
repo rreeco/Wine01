@@ -21,6 +21,7 @@ class Supplier extends Model
         'country',
         'address',
         'postal_code',
+        'description',
         'image_path'
     ];
 

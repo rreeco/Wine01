@@ -16,9 +16,11 @@ class Event extends Model
         'category',
         'description',
         'price', 
-        'location',
+        'citta',
+        'regione',
+        'via',
         'image_path',
-        'seller_id'
+        'idc',
     ];
 
     protected $casts = [
