@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('country');
             $table->string('address')->nullable();
-            $table->string('postal_code')->nullable();
+            $table->string('phone')->nullable();
             $table->text('description')->nullable();
             $table->string('image_path')->nullable();
             $table->rememberToken();
