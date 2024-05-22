@@ -20,7 +20,7 @@ class Event extends Model
         'regione',
         'via',
         'image_path',
-        'idc',
+        'seller_id',
     ];
 
     protected $casts = [
