@@ -14,7 +14,8 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        //
+        $supplier = Supplier::all();
+        return view('supplier.index', compact ('supplier'));
     }
 
     /**
@@ -24,7 +25,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        //
+        return view('supplier.create');
     }
 
     /**
@@ -35,7 +36,20 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request -> validate ([
+        'name',
+        'born',
+        'email',
+        'password',
+        'phone',
+        'vat',
+        'city',
+        'country',
+        'address',
+        'postal_code',
+        'description',
+        'image_path'
+        ]);
     }
 
     /**
