@@ -29,7 +29,8 @@ class Wine extends Model
     protected $casts = [
         'annata' => 'integer',
         'prezzo' => 'float',
-        'listino' => 'float'       
+        'listino' => 'float',
+        'categoria' => 'string'       
     ];
 
 }
