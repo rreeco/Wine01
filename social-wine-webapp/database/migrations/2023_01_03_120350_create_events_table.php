@@ -23,19 +23,19 @@ return new class extends Migration
             $table->string('citta');
             $table->string('regione');
             $table->string('via');
-            $table->string('ids')->nullable();  
-            $table->string('idc')->nullable();   
+            $table->string('seller_id')->nullable();  
+//$table->string('idc')->nullable();   
             $table->timestamps();
 
-            $table->foreign('ids')
+            $table->foreign('seller_id')
                 ->references('id')
                 ->on('suppliers');
                 //->onDelete('cascade');
 
-            $table->foreign('idc')
+            /*$table->foreign('idc')
                 ->references('id')
                 ->on('wine_cellars');
-                //->onDelete('cascade');
+                //->onDelete('cascade');*/
         });
     }
 
