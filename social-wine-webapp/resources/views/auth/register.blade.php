@@ -173,7 +173,7 @@
             setSellerTab() {
                 this.selected_tab = 3;
             },
-            /* submitForm() {
+            submitForm() {
                 let roles = [];
                 let user = {
                     "name": this.name,
@@ -218,7 +218,7 @@
                     console.err(err)
                 });
 
-            } */
+            } 
         }
     }).mount("#register_container");
 </script>
