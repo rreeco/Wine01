@@ -14,7 +14,8 @@ class WineCellarController extends Controller
      */
     public function index()
     {
-        //
+        $wineCellar = WineCellar::all();
+        return response(view('wineCellar.index', compact('wineCellar')));
     }
 
     /**
@@ -24,18 +25,35 @@ class WineCellarController extends Controller
      */
     public function create()
     {
-        //
+        return response(view('wineCellar.create'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * 
      */
     public function store(Request $request)
     {
-        //
+        $request -> validate ([
+            'name',
+            'born',
+            'description',
+            'email',
+            'password',
+            'phone',
+            'vat',
+            'address',
+            'city',
+            'country',
+            'image_path'
+        ]);
+
+        WineCellar::create($request -> all());
+
+        return redirect() -> route('wineCellar.index')
+                          -> with ('suiccess', 'Cantina inserita con successo.');
     }
 
     /**
@@ -46,7 +64,8 @@ class WineCellarController extends Controller
      */
     public function show(WineCellar $wineCellar)
     {
-        //
+        $wineCellar = WineCellar::findOrFail($wineCellar);
+        return response(view('wineCellar.show', compact('wineCellar')));
     }
 
     /**
@@ -57,7 +76,8 @@ class WineCellarController extends Controller
      */
     public function edit(WineCellar $wineCellar)
     {
-        //
+        $wineCellar = WineCellar::findOrFail($wineCellar);
+        return response(view('wineCellar.edit', compact('wineCellar')));
     }
 
     /**
@@ -65,21 +85,43 @@ class WineCellarController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\WineCellar  $wineCellar
-     * @return \Illuminate\Http\Response
+     * 
      */
     public function update(Request $request, WineCellar $wineCellar)
     {
-        //
+        $request -> validate ([
+            'name',
+            'born',
+            'description',
+            'email',
+            'password',
+            'phone',
+            'vat',
+            'address',
+            'city',
+            'country',
+            'image_path'
+        ]);
+
+        $wineCellar = WineCellar::findOrFail($wineCellar);
+        $wineCellar -> update($request -> all());
+
+        return redirect() -> route ('wineCellar.index')
+                          -> with ('success', 'Cantina modificata con successo.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\WineCellar  $wineCellar
-     * @return \Illuminate\Http\Response
+     * 
      */
     public function destroy(WineCellar $wineCellar)
     {
-        //
+        $wineCellar = WineCellar::findOrFail($wineCellar);
+        $wineCellar -> delete();
+
+        return redirect() -> route('wineCellar.index')
+                          -> with ('success', 'Cantina eliminata con successo.');
     }
 }
