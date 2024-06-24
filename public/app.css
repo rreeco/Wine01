@@ -1,0 +1,63 @@
+body{
+    background: #ffebf9;
+    color: #0c0a03;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    color: #cda434;
+    background: #560028;
+    text-align: center;
+    border-color: #cca149;
+}
+
+h2{
+    color: #cda434;
+    background: #0c0a03;
+    text-align: center;
+}
+
+h3{
+    color: #560028;
+    background: #cda434 ;
+    background-size: auto;
+}
+
+a{
+    
+    align-items: center;
+    color: #c60a19;
+    margin: 5px;
+    
+}
+
+article{
+    padding-top: 1px solid #cca120;
+}
+
+article + article{
+     margin-top: 3rem;
+     padding-top: 1rem;
+     border-top: 2px solid #cda434;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    width: auto;
+}
+
+tr{
+    color: #560028;
+}
+
+.Mtable{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
